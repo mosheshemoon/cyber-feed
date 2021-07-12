@@ -1,0 +1,51 @@
+<mat-dialog-content [formGroup]="restaurantItemForm" class="dialog-content">
+  <mat-form-field>
+    <input matInput placeholder="title" formControlName="title" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>types</mat-label>
+    <mat-select formControlName="type" multiple>
+      <mat-option *ngFor="let type of types" [value]="type">{{
+        type
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="titlMC"
+      formControlName="titlMC"
+      value="titlMC"
+    />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="img url" formControlName="image" />
+  </mat-form-field>
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="rating"
+      type="number"
+      formControlName="rating"
+    />
+  </mat-form-field>
+  <mat-form-field>
+    <input
+      matInput
+      type="number"
+      placeholder="minimum charge"
+      formControlName="minCharge"
+    />
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button class="mat-raised-button" (click)="close()">Close</button>
+  <button
+    mat-button
+    mat-primary
+    [disabled]="!restaurantItemForm.valid"
+    (click)="save()"
+  >
+    Save
+  </button>
+</mat-dialog-actions>
