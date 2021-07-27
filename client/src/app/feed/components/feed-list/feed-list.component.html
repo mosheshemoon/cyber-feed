@@ -1,0 +1,7 @@
+
+<div>
+  <cyber-card
+    *ngFor="let item of feedService.cardItems$ | async;"
+    [item]="item"
+  ></cyber-card>
+</div>

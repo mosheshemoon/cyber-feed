@@ -1,0 +1,31 @@
+table {
+  width: 100%;
+  margin-top: 10px;
+}
+
+img {
+  width: 25px;
+  height: 25px;
+}
+
+.top-feed {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-menu {
+  margin-top: 40px;
+}
+
+mat-row {
+    white-space: normal;
+}
+
+button{
+    background-color: white;
+    margin: 10px;
+}
+
+ul{
+margin-left: -40px;  
+}

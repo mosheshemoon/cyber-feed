@@ -1,0 +1,12 @@
+<div>
+  <span>Cyber Feed</span>
+  <form ngNativeValidate #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+    <div class="input-item">
+      <p>share your thoughts...</p>
+      <input type="text" [(ngModel)]="description" name="description" required />
+    </div>
+    <button>post</button>
+    <button (click)="delete()">cancel</button>
+  </form>
+</div>
+<app-feed-list></app-feed-list>
